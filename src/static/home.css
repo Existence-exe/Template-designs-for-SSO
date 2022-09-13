@@ -1,0 +1,60 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #282739;
+    height: 100vh;
+    width: 100vw;
+}
+
+nav {
+    height: 20%;
+    width: 100%;
+    justify-content: center;
+    overflow-y: hidden;
+}
+
+ul {
+    justify-content: space-between;
+    height: 100%;
+    --gap: 10rem
+}
+
+
+li {
+    justify-content: center;
+    color: white;
+    list-style: none;
+}
+
+.flex {
+    display: flex;
+    gap: var(--gap, 1rem);
+}
+
+.nav-container {
+    padding-top: 2rem;
+    padding-inline: 1rem;
+}
+
+#logo {
+    height: 3rem;
+    width: 4rem;
+    border: 1px solid white;
+}
+
+#contact-us {
+    height: 4rem;
+    width: 12rem;
+    border: 1px solid white;
+}
+
+.navlink {
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+}
