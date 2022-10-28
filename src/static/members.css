@@ -1,12 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-:root {
-    --swiper-theme-color: #CBD8D7;
 }
 
 body {
@@ -15,13 +12,7 @@ body {
     height: 100vh;
     width: 100vw;
     overflow: hidden;
-}
-
-nav {
-    height: 20%;
-    width: 60%;
-    justify-content: start;
-    margin-right: min(10%, 11.23rem);
+    display: flex;
 }
 
 ul {
@@ -30,6 +21,10 @@ ul {
     width: 65%;
 }
 
+.flex {
+    display: flex;
+    gap: var(--gap, 1rem)
+}
 
 li {
     justify-content: center;
@@ -47,25 +42,25 @@ a {
     z-index: -1;
 }
 
-.decorations-bubble-1 {
+/*.decorations-bubble-1 {
     position: absolute;
-    width: 1006px;
-    height: 1006px;
-    left: -570px;
-    top: -570px;
+    width: min(50rem, 70vh);
+    height: min(50rem, 70vh);
+    left: min(-20rem, -20%);
+    top: -25rem;
     background: #CBD8D7;
     border-radius: 600px;
 }
 
 .decorations-bubble-2 {
     position: absolute;
-    width: 1006px;
-    height: 1006px;
-    left: 1574px;
-    top: 775px;
+    width: min(50rem, 70vh);
+    height: min(50rem, 70vh);
+    left: min(80vw, 100rem);
+    top: min(75vh, 80rem);
     background: #CBD8D7;
     border-radius: 600px;
-}
+}*/
 
 .content {
     z-index: 1;
@@ -88,7 +83,7 @@ a {
 .logo-name {
     font-style: normal;
     font-weight: 600;
-    font-size: 33px;
+    font-size: 2rem;
     line-height: 126%;
     color: #282739;
 }
@@ -96,10 +91,14 @@ a {
 .logo-tagline {
     font-style: normal;
     font-weight: 500;
-    font-size: 18px;
+    font-size: 1rem;
     line-height: 126%;
     letter-spacing: 0.085em;
     color: #282739;
+}
+
+.main-logo {
+    scale: 0.8;
 }
 
 .tabs {
@@ -111,7 +110,7 @@ a {
 .tabs div {
     font-style: normal;
     font-weight: 600;
-    font-size: 30px;
+    font-size: min(1.5rem, 10vh);
     line-height: 126%;
     color: #FFFFFF;
 }
@@ -120,15 +119,149 @@ a {
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 600;
-    font-size: 30px;
+    font-size: 1.5rem;
     line-height: 126%;
     color: #282738;
-    width: 256px;
+    width: 12rem;
     height: 64px;
     display: grid;
     place-items: center;
     background: #CBD8D7;
     border-radius: 54px;
+    transition: scale ease-out 0.15s;
+}
+
+/* navbar ends */
+
+.main {
+    position: absolute;
+    z-index: -1;
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    place-items: center;
+}
+
+.main-logo {
+    width: 10rem;
+    height: 10rem;
+}
+
+.logo::before {
+    content: '';
+    z-index: -1;
+    position: absolute;
+    height: 50rem;
+    width: 50rem;
+    border-radius: 50%;
+    left: -25rem;
+    top: -35rem;
+    background: #CBD8D7;
+    animation: 4s linear infinite alternate blob1;
+}
+
+.main-heading::before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    height: 50rem;
+    width: 50rem;
+    border-radius: 50%;
+    background: #CBD8D7;
+    right: -20vw;
+    top: 75vh;
+    animation: 4s linear infinite alternate blob2;
+}
+
+.contact-us:hover {
+    scale: 1.1;
+}
+
+.tabs-home::before {
+    content: '';
+    width: 5rem;
+    height: 0.2rem;
+    margin-top: 2rem;
+    opacity: 0;
+    left: 33vw;
+    background: #CBD8D7;
+    position: absolute;
+    transition: opacity 300ms, transform 300ms;
+}
+
+.tabs-home:hover::before {
+    opacity: 1;
+    transform: translate3d(2vw, 0, 0);
+}
+
+.tabs-members::before {
+    content: '';
+    width: 7.5rem;
+    height: 0.2rem;
+    margin-top: 2rem;
+    opacity: 0;
+    left: 46vw;
+    background: #CBD8D7;
+    position: absolute;
+    transition: opacity 300ms, transform 300ms;
+}
+
+.tabs-members:hover::before {
+    opacity: 1;
+    transform: translate3d(2vw, 0, 0);
+}
+
+.tabs-gallery::before {
+    content: '';
+    width: 6rem;
+    height: 0.2rem;
+    margin-top: 2rem;
+    opacity: 0;
+    left: 60.8vw;
+    background: #CBD8D7;
+    position: absolute;
+    transition: opacity 300ms, transform 300ms;
+}
+
+.tabs-gallery:hover::before {
+    opacity: 1;
+    transform: translate3d(2vw, 0, 0);
+}
+
+
+/*animations probably baaje*/
+@keyframes blob1 {
+    0% {
+        left: -25rem;
+        top: -35rem;
+    }
+
+    50% {
+        left: -25rem;
+        top: -30rem;
+    }
+
+    100% {
+        left: -20rem;
+        top: -35rem;
+    }
+}
+
+@keyframes blob2 {
+    0% {
+        right: -20vw;
+        top: 75vh;
+    }
+
+    50% {
+        right: -25vw;
+        top: 75vh;
+    }
+
+    100% {
+        right: -20vw;
+        top: 80vh;
+    }
 }
 
 /* navbar ends */
