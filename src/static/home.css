@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@600&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
 * {
     margin: 0;
     padding: 0;
@@ -7,10 +6,11 @@
 }
 
 body {
-    font-family: 'Bebus Neue', cursive;
+    font-family: 'Montserrat', sans-serif;
     background: #282739;
     height: 100vh;
     width: 100vw;
+    overflow: hidden;
 }
 
 nav {
@@ -33,122 +33,107 @@ li {
     list-style: none;
 }
 
-.flex {
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.decorations {
+    position: absolute;
+    z-index: -1;
+}
+
+.decorations-bubble-1 {
+    position: absolute;
+    width: 1006px;
+    height: 1006px;
+    left: -600px;
+    top: -320px;
+    background: #CBD8D7;
+    border-radius: 600px;
+}
+
+.decorations-bubble-2 {
+    position: absolute;
+    width: 1006px;
+    height: 1006px;
+    left: 1574px;
+    top: 605px;
+    background: #CBD8D7;
+    border-radius: 600px;
+}
+
+.content {
+    z-index: 1;
+    position: absolute;
+}
+
+
+/* navbar */
+
+.nav {
+    position: absolute;
+    z-index: 1;
+    padding: 2vw;
+    width: 100vw;
     display: flex;
-    gap: var(--gap, 1rem);
-}
-
-.grid {
-    display: grid;
-}
-
-.nav-container {
-    padding-top: 2rem;
-    padding-inline: 1rem;
-    height: max(6rem, 10%);
+    align-items: center;
     justify-content: space-between;
 }
 
-#logo {
-    color: white;
-    height: 5rem;
-    width: max(8rem, 10%);
-    flex-shrink: 0;
-    justify-content: left;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1.5em;
+.logo-name {
+    font-style: normal;
     font-weight: 600;
+    font-size: 33px;
+    line-height: 126%;
+    color: #282739;
 }
 
-#logo::after {
-    font-size: 0.7em;
-    content: 'Ideate. Innovate. Educate.';
-    position: absolute;
-    padding-top: 1.6rem;
+.logo-tagline {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 126%;
+    letter-spacing: 0.085em;
+    color: #282739;
 }
 
-.navlink {
-    position: relative;
-    text-decoration: none;
-    font-family: 'Poppins', sans-serif;
-    font-size: 1.5em;
-    color: white;
+.tabs {
+    display: flex;
+    width: 50vw;
+    justify-content: space-evenly;
 }
 
-.navlink::after {
-    content: '';
-    height: 0.1rem;
-    width: 99%;
-    left: -5%;
-    bottom: 10%;
-    position: absolute;
-    background-color: white;
-    opacity: 0;
-    transition: opacity 300ms, transform 300ms;
+.tabs div {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 126%;
+    color: #FFFFFF;
 }
 
-.navlink:hover::after {
-    opacity: 1;
-    transform: translate3d(6%, 0, 0);
-}
-
-.nav-list>li {
-    height: 2rem;
-}
-
-.content-container {
-    height: 90%;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 20% 50% auto;
-}
-
-.capitalcopia-banner {
-    scale: 0.4;
+.contact-us {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 126%;
+    color: #282738;
+    width: 256px;
+    height: 64px;
     display: grid;
-    grid-column: 2/span 1;
-    grid-row: 2/span 1; 
-    justify-items: center; 
-    align-items: center;
+    place-items: center;
+    background: #CBD8D7;
+    border-radius: 54px;
 }
-.capitalcopia-circle { 
+
+/* navbar ends */
+
+.main {
+    position: absolute;
+    z-index: -1;
+    height: 100vh;
+    width: 100vw;
     display: grid;
-    grid-column: 2/span 1;
-    grid-row: 2/span 1; 
-    justify-items: center; 
-    align-items: center;
-    
+    place-items: center;
 }
-
-
-
-/*@media screen and (max-width: 35em) {
-    .nav-container {
-        flex-direction: column;
-        padding: 0;
-        margin: 0;
-        overflow-x: hidden;
-        overflow-y: hidden;
-    }
-
-    .nav-list {
-        flex-direction: column;
-        --gap: 10rem
-    }
-
-    #logo {
-        top: 3%;
-        left: 5%;
-        position: fixed;
-        opacity: 1;
-    }
-
-    nav {
-        padding-block: min(14rem, 25.5vh);
-        overflow-x: hidden;
-        overflow-y: hidden;
-        background: hsl(0 0% 100% / 0.2);
-        backdrop-filter: blur(5em);
-        width: min(30rem, 75vw);
-        margin-left: min(50vw, 8rem);
-    }
-}*/
