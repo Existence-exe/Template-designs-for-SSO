@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Bebus Neue', cursive;
+    background: #282739;
+    height: 100vh;
+    width: 100vw;
+}
+
+nav {
+    width: 60%;
+    justify-content: center;
+}
+
+ul {
+    justify-content: space-between;
+    height: 100%;
+    width: 65%;
+}
+
+
+li {
+    justify-content: center;
+    color: white;
+    list-style: none;
+}
+
+.flex {
+    display: flex;
+    gap: var(--gap, 1rem);
+}
+
+.grid {
+    display: grid;
+}
+
+.nav-container {
+    padding-top: 2rem;
+    padding-inline: 1rem;
+    height: max(6rem, 10%);
+    justify-content: space-between;
+}
+
+#logo {
+    color: white;
+    height: 5rem;
+    width: max(8rem, 10%);
+    flex-shrink: 0;
+    justify-content: left;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5em;
+    font-weight: 600;
+}
+
+#logo::after {
+    font-size: 0.7em;
+    content: 'Ideate. Innovate. Educate.';
+    position: absolute;
+    padding-top: 1.6rem;
+}
+
+.navlink {
+    position: relative;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5em;
+    color: white;
+}
+
+.navlink::after {
+    content: '';
+    height: 0.1rem;
+    width: 99%;
+    left: -5%;
+    bottom: 10%;
+    position: absolute;
+    background-color: white;
+    opacity: 0;
+    transition: opacity 300ms, transform 300ms;
+}
+
+.navlink:hover::after {
+    opacity: 1;
+    transform: translate3d(6%, 0, 0);
+}
+
+.nav-list>li {
+    height: 2rem;
+}
+
+.contact-us {
+    display: flex;
+    width: 10%;
+    background: #CBD8D7;
+    border-radius: 10vh;
+    justify-content: center;
+    align-items: center;
+    transition: transform ease-in-out 0.15s ;
+}
+
+.contact-us:hover {
+    transform: scale(1.08);
+    cursor: default;
+}
+
+
+.contact-us>p {
+    font-family: 'Montserrat', sans-serif;
+    color: rgb(54, 51, 51);
+    font-size: 1.2rem;
+    transition: font-size ease-in-out 0.15s;
+}

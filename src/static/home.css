@@ -15,15 +15,15 @@ body {
 
 nav {
     height: 20%;
-    width: 70%;
-    justify-content: end;
-    margin-right: min(10%, 10rem);
+    width: 60%;
+    justify-content: start;
+    margin-right: min(10%, 11.23rem);
 }
 
 ul {
     justify-content: space-between;
     height: 100%;
-    width: 70%;
+    width: 65%;
 }
 
 
@@ -38,9 +38,14 @@ li {
     gap: var(--gap, 1rem);
 }
 
+.grid {
+    display: grid;
+}
+
 .nav-container {
     padding-top: 2rem;
     padding-inline: 1rem;
+    height: max(6rem, 10%);
     justify-content: space-between;
 }
 
@@ -55,7 +60,7 @@ li {
     font-weight: 600;
 }
 
-#logo::after { 
+#logo::after {
     font-size: 0.7em;
     content: 'Ideate. Innovate. Educate.';
     position: absolute;
@@ -91,7 +96,32 @@ li {
     height: 2rem;
 }
 
-@media screen and (max-width: 35em) {
+.content-container {
+    height: 90%;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 20% 50% auto;
+}
+
+.capitalcopia-banner {
+    scale: 0.4;
+    display: grid;
+    grid-column: 2/span 1;
+    grid-row: 2/span 1; 
+    justify-items: center; 
+    align-items: center;
+}
+.capitalcopia-circle { 
+    display: grid;
+    grid-column: 2/span 1;
+    grid-row: 2/span 1; 
+    justify-items: center; 
+    align-items: center;
+    
+}
+
+
+
+/*@media screen and (max-width: 35em) {
     .nav-container {
         flex-direction: column;
         padding: 0;
@@ -121,4 +151,4 @@ li {
         width: min(30rem, 75vw);
         margin-left: min(50vw, 8rem);
     }
-}
+}*/
