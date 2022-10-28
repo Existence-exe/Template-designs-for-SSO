@@ -85,7 +85,7 @@ a {
     font-weight: 600;
     font-size: 2rem;
     line-height: 126%;
-    color: #282739;
+    color: #CBD8D7;
 }
 
 .logo-tagline {
@@ -94,7 +94,25 @@ a {
     font-size: 1rem;
     line-height: 126%;
     letter-spacing: 0.085em;
-    color: #282739;
+    color: #CBD8D7;
+}
+
+.quote {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 3rem;
+    line-height: 126%;
+    letter-spacing: 0.085em;
+    color: #CBD8D7;
+}
+
+.author {
+    text-align: end;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 2rem;
+    line-height: 246%;
+    color: #CBD8D7;
 }
 
 .main-logo {
@@ -142,10 +160,7 @@ a {
     place-items: center;
 }
 
-.main-logo {
-    width: 10rem;
-    height: 10rem;
-}
+.main-logo {}
 
 .logo::before {
     content: '';
@@ -154,8 +169,8 @@ a {
     height: 50rem;
     width: 50rem;
     border-radius: 50%;
-    left: -25rem;
-    top: -35rem;
+    left: -20rem;
+    top: 40rem;
     background: #CBD8D7;
     animation: 4s linear infinite alternate blob1;
 }
@@ -164,12 +179,12 @@ a {
     content: '';
     position: absolute;
     z-index: -1;
-    height: 50rem;
-    width: 50rem;
+    height: 60rem;
+    width: 60rem;
     border-radius: 50%;
     background: #CBD8D7;
-    right: -80vw;
-    top: 45vh;
+    right: -70vw;
+    top: -30vh;
     animation: 4s linear infinite alternate blob2;
 }
 
@@ -223,40 +238,57 @@ a {
     transition: opacity 300ms, transform 300ms;
 }
 
+footbar {
+    position: absolute;
+    top: 45vh;
+    height: 10rem;
+    width: 55rem;
+    background: rgba(0, 0, 0, 0);
+    --gap: 2rem
+}
 
+footbar>img {
+    scale: 0.5;
+    transition: scale ease-in 0.2s;
+}
 
+footbar>img:hover {
+    scale: 0.6;
+    cursor:pointer;
+}
 
 /*animations probably baaje*/
+
 @keyframes blob1 {
     0% {
-        left: -25rem;
-        top: -35rem;
+        left: -20rem;
+        top: 40rem;
     }
 
     50% {
-        left: -25rem;
-        top: -30rem;
+        left: -20rem;
+        top: 45rem;
     }
 
     100% {
-        left: -20rem;
-        top: -35rem;
+        left: -25rem;
+        top: 40rem;
     }
 }
 
 @keyframes blob2 {
     0% {
-        right: -80vw;
-        top: 45vh;
+        right: -70vw;
+        top: -30vh;
     }
 
     50% {
-        right: -75vw;
-        top: 45vh;
+        right: -65vw;
+        top: -30vh;
     }
 
     100% {
-        right: -80vw;
-        top: 40vh;
+        right: -70vw;
+        top: -35vh;
     }
 }
