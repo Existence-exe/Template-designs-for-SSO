@@ -11,13 +11,7 @@ body {
     height: 100vh;
     width: 100vw;
     overflow: hidden;
-}
-
-nav {
-    height: 20%;
-    width: 60%;
-    justify-content: start;
-    margin-right: min(10%, 11.23rem);
+    display: flex;
 }
 
 ul {
@@ -26,6 +20,10 @@ ul {
     width: 65%;
 }
 
+.flex { 
+    display: flex;
+    gap: var(--gap,1rem)
+}
 
 li {
     justify-content: center;
@@ -45,20 +43,20 @@ a {
 
 .decorations-bubble-1 {
     position: absolute;
-    width: 1006px;
-    height: 1006px;
-    left: -600px;
-    top: -320px;
+    width: min(50rem , 70vh);
+    height: min(50rem , 70vh);
+    left: min(-20rem,-20%);
+    top: -25rem;
     background: #CBD8D7;
     border-radius: 600px;
 }
 
 .decorations-bubble-2 {
     position: absolute;
-    width: 1006px;
-    height: 1006px;
-    left: 1574px;
-    top: 605px;
+    width: min(50rem, 70vh);
+    height: min(50rem, 70vh);
+    left: min(80vw,100rem);
+    top: min(75vh,80rem);
     background: #CBD8D7;
     border-radius: 600px;
 }
@@ -84,7 +82,7 @@ a {
 .logo-name {
     font-style: normal;
     font-weight: 600;
-    font-size: 33px;
+    font-size: 2rem;
     line-height: 126%;
     color: #282739;
 }
@@ -92,10 +90,14 @@ a {
 .logo-tagline {
     font-style: normal;
     font-weight: 500;
-    font-size: 18px;
+    font-size: 1rem;
     line-height: 126%;
     letter-spacing: 0.085em;
     color: #282739;
+}
+
+.main-logo {
+    scale: 0.6;
 }
 
 .tabs {
@@ -107,7 +109,7 @@ a {
 .tabs div {
     font-style: normal;
     font-weight: 600;
-    font-size: 30px;
+    font-size: min(1.5rem ,10vh);
     line-height: 126%;
     color: #FFFFFF;
 }
@@ -116,10 +118,10 @@ a {
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 600;
-    font-size: 30px;
+    font-size: 1.5rem;
     line-height: 126%;
     color: #282738;
-    width: 256px;
+    width: 12rem;
     height: 64px;
     display: grid;
     place-items: center;

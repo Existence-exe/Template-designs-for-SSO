@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@600&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
 * {
     margin: 0;
     padding: 0;
@@ -7,15 +6,12 @@
 }
 
 body {
-    font-family: 'Bebus Neue', cursive;
+    font-family: 'Montserrat', sans-serif;
     background: #282739;
     height: 100vh;
     width: 100vw;
-}
-
-nav {
-    width: 60%;
-    justify-content: center;
+    overflow: hidden;
+    display: flex;
 }
 
 ul {
@@ -24,6 +20,10 @@ ul {
     width: 65%;
 }
 
+.flex { 
+    display: flex;
+    gap: var(--gap,1rem)
+}
 
 li {
     justify-content: center;
@@ -31,88 +31,112 @@ li {
     list-style: none;
 }
 
-.flex {
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.decorations {
+    position: absolute;
+    z-index: -1;
+}
+
+.decorations-bubble-1 {
+    position: absolute;
+    width: min(50rem , 70vh);
+    height: min(50rem , 70vh);
+    left: min(-20rem,-20%);
+    top: -25rem;
+    background: #CBD8D7;
+    border-radius: 600px;
+}
+
+.decorations-bubble-2 {
+    position: absolute;
+    width: min(50rem, 70vh);
+    height: min(50rem, 70vh);
+    left: min(80vw,100rem);
+    top: min(75vh,80rem);
+    background: #CBD8D7;
+    border-radius: 600px;
+}
+
+.content {
+    z-index: 1;
+    position: absolute;
+}
+
+
+/* navbar */
+
+.nav {
+    position: absolute;
+    z-index: 1;
+    padding: 2vw;
+    width: 100vw;
     display: flex;
-    gap: var(--gap, 1rem);
-}
-
-.grid {
-    display: grid;
-}
-
-.nav-container {
-    padding-top: 2rem;
-    padding-inline: 1rem;
-    height: max(6rem, 10%);
+    align-items: center;
     justify-content: space-between;
 }
 
-#logo {
-    color: white;
-    height: 5rem;
-    width: max(8rem, 10%);
-    flex-shrink: 0;
-    justify-content: left;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1.5em;
+.logo-name {
+    font-style: normal;
     font-weight: 600;
+    font-size: 2rem;
+    line-height: 126%;
+    color: #282739;
 }
 
-#logo::after {
-    font-size: 0.7em;
-    content: 'Ideate. Innovate. Educate.';
-    position: absolute;
-    padding-top: 1.6rem;
+.logo-tagline {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 126%;
+    letter-spacing: 0.085em;
+    color: #282739;
 }
 
-.navlink {
-    position: relative;
-    text-decoration: none;
-    font-family: 'Poppins', sans-serif;
-    font-size: 1.5em;
-    color: white;
+.main-logo {
+    scale: 0.6;
 }
 
-.navlink::after {
-    content: '';
-    height: 0.1rem;
-    width: 99%;
-    left: -5%;
-    bottom: 10%;
-    position: absolute;
-    background-color: white;
-    opacity: 0;
-    transition: opacity 300ms, transform 300ms;
+.tabs {
+    display: flex;
+    width: 50vw;
+    justify-content: space-evenly;
 }
 
-.navlink:hover::after {
-    opacity: 1;
-    transform: translate3d(6%, 0, 0);
-}
-
-.nav-list>li {
-    height: 2rem;
+.tabs div {
+    font-style: normal;
+    font-weight: 600;
+    font-size: min(1.5rem ,10vh);
+    line-height: 126%;
+    color: #FFFFFF;
 }
 
 .contact-us {
-    display: flex;
-    width: 10%;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.5rem;
+    line-height: 126%;
+    color: #282738;
+    width: 12rem;
+    height: 64px;
+    display: grid;
+    place-items: center;
     background: #CBD8D7;
-    border-radius: 10vh;
-    justify-content: center;
-    align-items: center;
-    transition: transform ease-in-out 0.15s ;
+    border-radius: 54px;
 }
 
-.contact-us:hover {
-    transform: scale(1.08);
-    cursor: default;
-}
+/* navbar ends */
 
-
-.contact-us>p {
-    font-family: 'Montserrat', sans-serif;
-    color: rgb(54, 51, 51);
-    font-size: 1.2rem;
-    transition: font-size ease-in-out 0.15s;
+.main {
+    position: absolute;
+    z-index: -1;
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    place-items: center;
 }
+    
