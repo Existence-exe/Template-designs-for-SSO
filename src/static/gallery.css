@@ -181,7 +181,7 @@ a {
     content: '';
     width: 5rem;
     height: 0.2rem;
-    margin-top: 2rem;
+    margin-top: 2.5rem;
     opacity: 0;
     left: 33vw;
     background: #CBD8D7;
@@ -198,7 +198,7 @@ a {
     content: '';
     width: 7.5rem;
     height: 0.2rem;
-    margin-top: 2rem;
+    margin-top: 2.5rem;
     opacity: 0;
     left: 46vw;
     background: #CBD8D7;
@@ -215,18 +215,15 @@ a {
     content: '';
     width: 6rem;
     height: 0.2rem;
-    margin-top: 2rem;
-    opacity: 0;
-    left: 60.8vw;
+    margin-top: 2.5rem;
+    opacity: 1;
+    left: 62.8vw;
     background: #CBD8D7;
     position: absolute;
     transition: opacity 300ms, transform 300ms;
 }
 
-.tabs-gallery:hover::before {
-    opacity: 1;
-    transform: translate3d(2vw, 0, 0);
-}
+
 
 
 /*animations probably baaje*/

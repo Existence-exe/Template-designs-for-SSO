@@ -177,24 +177,18 @@ a {
     content: '';
     width: 5rem;
     height: 0.2rem;
-    margin-top: 2rem;
-    opacity: 0;
-    left: 33vw;
+    margin-top: 2.5rem;
+    opacity: 1;
+    left: 35.1vw;
     background: #CBD8D7;
     position: absolute;
-    transition: opacity 300ms, transform 300ms;
-}
-
-.tabs-home:hover::before {
-    opacity: 1;
-    transform: translate3d(2vw, 0, 0);
 }
 
 .tabs-members::before {
     content: '';
     width: 7.5rem;
     height: 0.2rem;
-    margin-top: 2rem;
+    margin-top: 2.5rem;
     opacity: 0;
     left: 46vw;
     background: #CBD8D7;
@@ -211,7 +205,7 @@ a {
     content: '';
     width: 6rem;
     height: 0.2rem;
-    margin-top: 2rem;
+    margin-top: 2.5rem;
     opacity: 0;
     left: 60.8vw;
     background: #CBD8D7;

@@ -181,7 +181,7 @@ a {
     content: '';
     width: 5rem;
     height: 0.2rem;
-    margin-top: 2rem;
+    margin-top: 2.5rem;
     opacity: 0;
     left: 33vw;
     background: #CBD8D7;
@@ -196,26 +196,22 @@ a {
 
 .tabs-members::before {
     content: '';
-    width: 7.5rem;
+    width: 8rem;
     height: 0.2rem;
-    margin-top: 2rem;
-    opacity: 0;
-    left: 46vw;
+    margin-top: 2.5rem;
+    opacity: 1;
+    left: 47.8vw;
     background: #CBD8D7;
     position: absolute;
     transition: opacity 300ms, transform 300ms;
 }
 
-.tabs-members:hover::before {
-    opacity: 1;
-    transform: translate3d(2vw, 0, 0);
-}
 
 .tabs-gallery::before {
     content: '';
     width: 6rem;
     height: 0.2rem;
-    margin-top: 2rem;
+    margin-top: 2.5rem;
     opacity: 0;
     left: 60.8vw;
     background: #CBD8D7;
@@ -281,7 +277,7 @@ a {
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 600;
-    font-size: 60px;
+    font-size: 3rem;
     line-height: 126%;
     color: #FFFFFF;
     margin-bottom: 3rem;
