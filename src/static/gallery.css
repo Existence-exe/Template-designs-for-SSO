@@ -160,7 +160,7 @@ a {
     place-items: center;
 }
 
-.main-logo {}
+/* .main-logo {} */
 
 .logo::before {
     content: '';
@@ -248,12 +248,12 @@ footbar {
 }
 
 footbar>img {
-    scale: 0.5;
+    scale: 0.4;
     transition: scale ease-in 0.2s;
 }
 
 footbar>img:hover {
-    scale: 0.6;
+    scale: 0.5;
     cursor:pointer;
 }
 
@@ -278,17 +278,17 @@ footbar>img:hover {
 
 @keyframes blob2 {
     0% {
-        right: -70vw;
+        right: -80vw;
         top: -30vh;
     }
 
     50% {
-        right: -65vw;
+        right: -75vw;
         top: -30vh;
     }
 
     100% {
-        right: -70vw;
+        right: -80vw;
         top: -35vh;
     }
 }
