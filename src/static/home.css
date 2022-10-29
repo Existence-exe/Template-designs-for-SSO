@@ -157,7 +157,7 @@ a {
     left: -25rem;
     top: -35rem;
     background: #CBD8D7;
-    animation: 4s linear infinite alternate blob1;
+    animation: 4s linear ease-in-out alternate blob1;
 }
 
 .main-logo::before {
