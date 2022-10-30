@@ -21,6 +21,16 @@ ul {
     width: 65%;
 }
 
+/* hiding the scrollbar  */
+*::-webkit-scrollbar {
+    display: none;
+}
+* {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+
 .flex {
     display: flex;
     gap: var(--gap, 1rem)
@@ -243,6 +253,7 @@ footbar {
     top: 45vh;
     height: 10rem;
     width: 55rem;
+    justify-content: space-evenly;
     background: rgba(0, 0, 0, 0);
     --gap: 2rem
 }
@@ -256,9 +267,89 @@ footbar>img:hover {
     scale: 0.5;
     cursor:pointer;
 }
+.mobile-view { 
+    display: none;
+}
+
+
+.logo::before {
+    content: '';
+    z-index: -1;
+    position: absolute;
+    height: 50rem;
+    width: 50rem;
+    border-radius: 50%;
+    left: -25rem;
+    top: -35rem;
+    background: #CBD8D7;
+    animation: 4s linear ease-in-out alternate blob1;
+}
+
+.main-logo::before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    height: 50rem;
+    width: 50rem;
+    border-radius: 50%;
+    background: #CBD8D7;
+    right: -70vw;
+    top: 70vh;
+    animation: 4s linear infinite alternate blob2;
+}
+
+.contact-us:hover {
+    scale: 1.1;
+}
+
+.tabs-home::before {
+    content: '';
+    width: 5rem;
+    height: 0.2rem;
+    margin-top: 2.5rem;
+    opacity: 1;
+    left: 35.1vw;
+    background: #CBD8D7;
+    position: absolute;
+}
+
+.tabs-members::before {
+    content: '';
+    width: 7.5rem;
+    height: 0.2rem;
+    margin-top: 2.5rem;
+    opacity: 0;
+    left: 46vw;
+    background: #CBD8D7;
+    position: absolute;
+    transition: opacity 300ms, transform 300ms;
+}
+
+.tabs-members:hover::before {
+    opacity: 1;
+    transform: translate3d(2vw, 0, 0);
+}
+
+.tabs-gallery::before {
+    content: '';
+    width: 6rem;
+    height: 0.2rem;
+    margin-top: 2.5rem;
+    opacity: 0;
+    left: 60.8vw;
+    background: #CBD8D7;
+    position: absolute;
+    transition: opacity 300ms, transform 300ms;
+}
+
+.tabs-gallery:hover::before {
+    opacity: 1;
+    transform: translate3d(2vw, 0, 0);
+}
+
 
 /*animations probably baaje*/
-
+/* na na very bhalo */
 @keyframes blob1 {
     0% {
         left: -20rem;
@@ -290,5 +381,287 @@ footbar>img:hover {
     100% {
         right: -80vw;
         top: -35vh;
+    }
+}
+
+/* responsive ghapla */
+
+
+@media (0px <=width <=450px) {
+    *{
+        overflow-y: visible;
+        overflow-x : hidden;
+    }
+
+    body {
+        overflow-y: visible;
+    }
+
+    .mobile-view {
+        background: #CBD8D7;
+        width: 100vw;
+        height: 100vh;
+        padding: 20px;
+        z-index: 2;
+    }
+    
+
+    .mobile-logo {
+        height: fit-content;
+        width: fit-content;
+    }
+
+    .mobile-logo-name {
+        font-style: normal;
+        font-weight: 600;
+        font-size: 1.5rem;
+        line-height: 126%;
+        color: #282739;
+    }
+
+    .mobile-logo-tagline {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 0.8rem;
+        line-height: 126%;
+        letter-spacing: 0.04em;
+        color: #282739;
+    }
+
+    .desktop-tablet-view {
+        display: none;
+    }
+
+    .mobile-view {
+        display: block;
+        position: absolute;
+    }
+
+    .mobile-nav {
+        justify-content: space-between;
+    }
+
+    .mobile-content { 
+        flex-direction: column;
+    }
+
+    .hamburgers { 
+        cursor: pointer;
+        --gap : 0.5rem;
+        flex-direction: column;
+        justify-content: left;
+        align-items: flex-end;
+        width: fit-content;
+    }
+
+    .mobile-nav-tabs { 
+        width: 0;
+        height: 0;
+        position:absolute;
+        transition: width 0.25s ease-in-out,height 0.25s ease-in-out;
+    }
+
+    .mobile-nav-tab { 
+        display: none;
+        cursor: pointer;
+        width: calc(100% - 15vw);
+        text-align: center;
+        padding: min(2rem,3vh);
+        margin-left: 5vw;
+        border-radius: 10vh;
+        background-color: rgba(40, 39, 56,0.95);
+        transition: all 0.25s ease-in-out;
+    }
+
+    .mobile-nav-tab { 
+        font-weight: 600;
+        font-size: 1.3em;
+        color: #CBD8D7;
+        /* width: 100%; */
+        transition: all 0.15s ease-in-out;
+    }
+
+    .mobile-contact-us { 
+        display: none;
+        width: calc(100% - 15vw);
+        text-align: center;
+        padding: min(2rem,3vh);
+        margin-left: 5vw;
+        border-radius: 10vh;
+        border :solid 0.5rem rgba(40, 39, 56) ;
+        background-color: rgba(203, 216, 215);
+    }
+
+    .mobile-contact-us {
+        font-weight: 600;
+        font-size: 1.5em;
+        color: #282738;
+        /* width: 100%; */
+    }
+
+    .mobile-nav-cancel {
+        display: none; 
+        width: 50%;
+        margin-inline: 25%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .mobile-nav-cancel > img {
+        cursor: pointer;
+        margin-left: -2vh;
+        border-radius: 100%;
+        padding: 0.5rem;
+        text-align: center;
+        height: 3.5rem;
+        vertical-align: middle;
+        line-height: 1em;
+        width: 3.5rem; 
+        font-weight: 600;
+        font-size: 1.5em;
+        border :solid 0.4rem rgba(40, 39, 56) ;
+        background-color: rgba(203, 216, 215);
+        color: #282738;
+    }
+
+    /*.mobile-nav-hamburger { 
+        position: absolute;
+
+    }*/
+    /* navbar matha byatha */
+    /*.mobile-nav {
+        height: fit-content;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .mobile-nav-hamburger {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        height: 80px;
+        width: 200px;
+        z-index: 300;
+        gap: 10px;
+        cursor: pointer;
+    }*/
+
+    .hamburger-top,
+    .hamburger-middle,
+    .hamburger-bottom {
+        height: 8px;
+        width: 50px;
+        background-color: #282738;
+        border-radius: 50px;
+    }
+
+    .hamburger-top {
+        width: 30px;
+    }
+/*
+    .mobile-nav-tabs {
+        display: none;
+        transition: width 0.15s ease-in-out, height 0.15s ease-in-out;
+    }
+
+    .mobile-nav-tabs::after {
+        transition: width 0.1s ease-in-out;
+    }
+
+    .nav-mobile-body-active::before {
+        width: 0;
+        height: 0;
+    }
+
+    .nav-mobile-body-active {
+        padding-top: 20px;
+        padding-right: 20px;
+        position: absolute;
+        z-index: 200;
+        width: 100vw;
+        transition: width 0.15s ease-in-out, height 0.15s ease-in-out;
+        background: white;
+        height: 100vh;
+        padding: -20px;
+        right: 0;
+        top: 0;
+    }
+
+    .nav-mobile-body-active::after {
+        width: 0;
+        transition: width 0.15s linear;
+    }
+
+    .mobile-tab-active {
+        display: block;
+    }
+
+    .mobile-tab-active * {
+        color: #282738;
+        font-weight: 600;
+        font-size: 1.3em;
+        text-align: right;
+        margin: 8vh 0;
+        margin-right: 10px;
+    }
+
+    .mobile-contact-us {
+        color: #CBD8D7;
+        background-color: #282738;
+        padding: 20px;
+        border-radius: 80px;
+    }
+
+    .mobile-contact-us a {
+        height: fit-content;
+        color: #CBD8D7;
+        text-align: center;
+        margin-right: 0;
+    }*/
+
+    /* navbar matha byatha ends */
+
+    .mobile-body {
+        background: #282738;
+        border-radius: 50px;
+        height: calc(100vh - 120px);
+        display: grid;
+        place-items: center;
+    }
+
+    .mobile-quote {
+        color: white;
+        font-weight: 600;
+        font-size: 2.5em;
+        width: 80%;
+        margin-inline: auto;
+        text-align: center;
+    }
+    .mobile-author {
+        color: white;
+        font-weight: 300;
+        font-size: 1.5em;
+        width: fit-content;
+        margin-top: 2rem;
+        margin-left: calc(100% - 200px);
+    }
+    .mobile-body-stuff {
+        height: 80%;
+        display: flex;
+        flex-direction: column;
+        gap: 120px;
+        justify-content: center;
+    }
+    .mobile-quote-body {
+        height: fit-content;
+    }
+    .mobile-icons {
+        display: flex;
+        width: 80%;
+        margin-inline: auto;
+        justify-content: space-evenly;
+    }
+    .mobile-icons img {
+        width: 10vw;
     }
 }

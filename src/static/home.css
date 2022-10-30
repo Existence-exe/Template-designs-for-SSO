@@ -359,11 +359,11 @@ a {
         transition: all 0.25s ease-in-out;
     }
 
-    .mobile-nav-tab > a { 
+    .mobile-nav-tab { 
         font-weight: 600;
         font-size: 1.3em;
         color: #CBD8D7;
-        width: 100%;
+        /* width: 100%; */
         transition: all 0.15s ease-in-out;
     }
 
@@ -378,11 +378,11 @@ a {
         background-color: rgba(203, 216, 215);
     }
 
-    .mobile-contact-us > a {
+    .mobile-contact-us {
         font-weight: 600;
         font-size: 1.5em;
         color: #282738;
-        width: 100%;
+        /* width: 100%; */
     }
 
     .mobile-nav-cancel {
@@ -510,7 +510,7 @@ a {
     .mobile-body {
         background: #282738;
         border-radius: 50px;
-        height: calc(100vh - 140px);
+        height: calc(100vh - 120px);
         display: grid;
         place-items: center;
     }
