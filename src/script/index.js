@@ -9,6 +9,7 @@ hamburgers.addEventListener('click', () => {
     if (classes.contains('passive')) {
         classes.remove('passive')
         tabs.setAttribute('style', `
+        padding-bottom: 6vh;
         position:absolute;
         display:flex;
         flex-direction: column;
@@ -17,11 +18,13 @@ hamburgers.addEventListener('click', () => {
         right:  -3vh;
         top : 0;
         height : 100vh ;
-        background-color : 	hsl(175 14% 82% / 0.1);
-        backdrop-filter: blur(1rem);
-        border-radius : 2vh;
+        background-color : 	#CBD8D7;
+        // backdrop-filter: blur(1rem);
+        // border-radius : 2vh;
         z-index : +1;
         width:80vw;
+        width: 300px;
+        border-left: 1px solid #282738;
         'transition: width 0.25s ease-in-out,height 0.25s ease-in-out;'
         `
         )

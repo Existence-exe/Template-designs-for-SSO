@@ -268,6 +268,10 @@ a {
         overflow-x : hidden;
     }
 
+    body {
+        overflow-y: scroll;
+    }
+
     .mobile-view {
         background: #CBD8D7;
         width: 100vw;
@@ -317,6 +321,7 @@ a {
     }
 
     .hamburgers { 
+        cursor: pointer;
         --gap : 0.5rem;
         flex-direction: column;
         justify-content: left;
@@ -333,10 +338,11 @@ a {
 
     .mobile-nav-tab { 
         display: none;
-        width: calc(100% - 10vw);
+        cursor: pointer;
+        width: calc(100% - 15vw);
         text-align: center;
         padding: min(2rem,3vh);
-        margin-left: 2vw;
+        margin-left: 5vw;
         border-radius: 10vh;
         background-color: rgba(40, 39, 56,0.95);
         transition: all 0.25s ease-in-out;
@@ -352,10 +358,10 @@ a {
 
     .mobile-contact-us { 
         display: none;
-        width: calc(100% - 10vw);
+        width: calc(100% - 15vw);
         text-align: center;
         padding: min(2rem,3vh);
-        margin-left: 2vw;
+        margin-left: 5vw;
         border-radius: 10vh;
         border :solid 0.5rem rgba(40, 39, 56) ;
         background-color: rgba(203, 216, 215);
@@ -376,18 +382,19 @@ a {
         align-items: center;
     }
 
-    .mobile-nav-cancel > p {
+    .mobile-nav-cancel > img {
+        cursor: pointer;
         margin-left: -2vh;
         border-radius: 100%;
         padding: 0.5rem;
         text-align: center;
-        height: 3rem;
+        height: 3.5rem;
         vertical-align: middle;
         line-height: 1em;
-        width: 3rem; 
+        width: 3.5rem; 
         font-weight: 600;
         font-size: 1.5em;
-        border :solid 0.2rem rgba(40, 39, 56) ;
+        border :solid 0.4rem rgba(40, 39, 56) ;
         background-color: rgba(203, 216, 215);
         color: #282738;
     }
