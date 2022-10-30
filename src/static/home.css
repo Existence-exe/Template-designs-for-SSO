@@ -21,6 +21,17 @@ ul {
     width: 65%;
 }
 
+/* hiding the scrollbar  */
+*::-webkit-scrollbar {
+    display: none;
+}
+* {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+
+
 .flex {
     display: flex;
     gap: var(--gap, 1rem)
@@ -269,7 +280,7 @@ a {
     }
 
     body {
-        overflow-y: scroll;
+        overflow-y: visible;
     }
 
     .mobile-view {
@@ -499,7 +510,7 @@ a {
     .mobile-body {
         background: #282738;
         border-radius: 50px;
-        height: calc(100vh - 100px);
+        height: calc(100vh - 140px);
         display: grid;
         place-items: center;
     }
