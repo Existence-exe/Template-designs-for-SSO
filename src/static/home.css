@@ -264,7 +264,7 @@ a {
 
 @media (0px <=width <=450px) {
     *{
-        overflow-y: hidden;
+        overflow-y: scroll;
         overflow-x : hidden;
     }
 
