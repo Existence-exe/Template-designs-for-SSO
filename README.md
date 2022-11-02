@@ -1,5 +1,5 @@
 # Capital Copia Website
-This contains a the website for Capital Copia in it's developmental stages
+This contains the website for Capital Copia in it's developmental stages
 
 
 ### Github Pages Link (Demo)
