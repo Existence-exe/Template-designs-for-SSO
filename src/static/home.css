@@ -353,6 +353,7 @@ a {
         width: calc(100% - 15vw);
         text-align: center;
         padding:  2.4vh;
+        margin-top: 20%;
         margin-left: 5vw;
         border-radius: 10vh;
         border: 0.3rem solid rgba(40, 39, 56, 0.95);
@@ -361,15 +362,20 @@ a {
         transition: all 0.25s ease-in-out;
     }
 
+    .mobile-tabs-members { 
+        margin-bottom: 20%;
+    }
+
     .mobile-contact-us {
         display: none;
         width: calc(100% - 15vw);
         text-align: center;
         padding: min(2rem, 3vh);
         margin-left: 5vw;
+        margin-bottom: 20%;
         border-radius: 10vh;
         border: solid 0.5rem rgba(40, 39, 56);
-        background-color: rgba(219, 51, 169, 0.445);
+        background-color: white;
     }
 
     .mobile-contact-us {
@@ -384,6 +390,7 @@ a {
         margin-inline: 32%;
         justify-content: center;
         align-items: center;
+        margin-top: 20%;
     }
 
     .mobile-nav-cancel>img {

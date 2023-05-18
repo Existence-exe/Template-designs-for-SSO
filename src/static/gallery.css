@@ -429,15 +429,24 @@ footbar>img:hover {
         transition: all 0.25s ease-in-out;
     }
 
+    .mobile-tabs-home { 
+        margin-top: 20%;
+    }
+
+    .mobile-tabs-members {
+        margin-bottom: 20%;
+    }
+
     .mobile-contact-us {
+        margin-bottom: 20%;
         display: none;
-        width: calc(100% - 15vw);
+        width: calc(100% - 15vw); 
         text-align: center;
         padding: min(2rem, 3vh);
         margin-left: 5vw;
         border-radius: 10vh;
         border: solid 0.5rem rgba(40, 39, 56);
-        background-color: rgba(203, 216, 215);
+        background-color: white;
     }
 
     .mobile-contact-us {
@@ -453,6 +462,7 @@ footbar>img:hover {
         margin-inline: 25%;
         justify-content: center;
         align-items: center;
+        margin-top: 20%;
     }
 
     .mobile-nav-cancel>img {

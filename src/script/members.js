@@ -27,7 +27,7 @@ hamburgers.addEventListener('click', () => {
         background-color : 	#CBD8D7;
         // backdrop-filter: blur(1rem);
         // border-radius : 2vh;
-        z-index : +1;
+        z-index : +2;
         width:80vw;
         width: 300px;
         border-left: 1px solid #282738;
