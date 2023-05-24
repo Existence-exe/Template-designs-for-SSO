@@ -333,10 +333,9 @@ a {
     .mobile-nav-tab {
         display: none;
         cursor: pointer;
-        width: calc(100% - 15vw);
+        width: calc(100% );
         text-align: center;
         padding: min(2rem, 3vh);
-        margin-left: 5vw;
         border-radius: 10vh;
         background-color: rgba(40, 39, 56, 0.95);
         transition: all 0.25s ease-in-out;
@@ -350,33 +349,29 @@ a {
     }
 
     .mobile-tabs-home {
-        width: calc(100% - 15vw);
         text-align: center;
         padding:  2.4vh;
-        margin-top: 20%;
-        margin-left: 5vw;
         border-radius: 10vh;
         border: 0.3rem solid rgba(40, 39, 56, 0.95);
         background-color: white;
+        margin-top: 10%;
         color: #282738 ;
         transition: all 0.25s ease-in-out;
     }
 
-    .mobile-tabs-members { 
-        margin-bottom: 20%;
+    .mobile-nav-link-container { 
+        display: none;
+        width: 80%;
+        margin-right: 5%;
+        gap: 10% ;
+        flex-direction: column;
+        padding-bottom: 40%;
+        justify-content: space-evenly   ;
+        align-items: center;
+        height: 80%;
     }
 
-    .mobile-contact-us {
-        display: none;
-        width: calc(100% - 15vw);
-        text-align: center;
-        padding: min(2rem, 3vh);
-        margin-left: 5vw;
-        margin-bottom: 20%;
-        border-radius: 10vh;
-        border: solid 0.5rem rgba(40, 39, 56);
-        background-color: white;
-    }
+    
 
     .mobile-contact-us {
         font-weight: 600;
@@ -387,15 +382,15 @@ a {
     .mobile-nav-cancel {
         display: none;
         width: 35%;
-        margin-inline: 32%;
+        margin-inline: 23%;
+        margin-left: 14%;
         justify-content: center;
         align-items: center;
-        margin-top: 20%;
+        margin-top: 15%;
     }
 
     .mobile-nav-cancel>img {
         cursor: pointer;
-        margin-left: -2vh;
         border-radius: 100%;
         padding: 0.5rem;
         text-align: center;

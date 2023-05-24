@@ -2,19 +2,21 @@ const hamburger = document.querySelector('.mobile-nav-hamburger');
 const tabs = document.querySelector('.mobile-nav-tabs');
 const hamburgers = document.querySelector('.hamburgers')
 const tab = Array.from(document.getElementsByClassName('mobile-nav-tab'));
-const contact_us = document.querySelector('.mobile-contact-us')
 const classes = tabs.classList
+const nav_container = document.querySelector('.mobile-nav-link-container')
 const cancel_button = document.querySelector('.mobile-nav-cancel')
 hamburgers.addEventListener('click', () => {
     if (classes.contains('passive')) {
         classes.remove('passive')
+        nav_container.setAttribute('style', 
+        "display:flex;"
+        )
         tabs.setAttribute('style', `
-        padding-bottom: 6vh;
         position:absolute;
         display:flex;
         flex-direction: column;
         justify-content : space-around;
-        align-items : flex-start;
+        align-items : center;
         right:  -3vh;
         top : 0;
         height : 100vh ;
@@ -31,7 +33,6 @@ hamburgers.addEventListener('click', () => {
         tab.forEach(e => {
             e.setAttribute('style', 'display:block')
         });
-        contact_us.setAttribute('style', 'display:block')
         cancel_button.setAttribute('style', 'display:flex')
         classes.add('flex')
         classes.add('active')
@@ -57,7 +58,6 @@ cancel_button.addEventListener('click', () => {
         tab.forEach(e => {
             e.setAttribute('style', 'display:none')
         });
-        contact_us.setAttribute('style', 'display:none')
         hamburgers.setAttribute('style', 'display : flex')
         cancel_button.setAttribute('style', 'display:none')
         console.log(tabs.attributes)

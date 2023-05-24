@@ -397,13 +397,25 @@ footbar>img:hover {
         transition: width 0.25s ease-in-out, height 0.25s ease-in-out;
     }
 
+    .mobile-nav-link-container {
+        display: none;
+        width: 80%;
+        margin-right: 5%;
+        gap: 10%;
+        flex-direction: column;
+        padding-bottom: 40%;
+        justify-content: space-evenly;
+        align-items: center;
+        height: 80%;
+    }
+
     .mobile-nav-tab {
         display: none;
         cursor: pointer;
-        width: calc(100% - 15vw);
+        width: calc(100% );
         text-align: center;
         padding: min(2rem, 3vh);
-        margin-left: 5vw;
+
         border-radius: 10vh;
         background-color: rgba(40, 39, 56, 0.95);
         transition: all 0.25s ease-in-out;
@@ -417,11 +429,10 @@ footbar>img:hover {
         transition: all 0.15s ease-in-out;
     }
 
-    .mobile-tabs-gallery { 
-        width: calc(100% - 15vw);
+    .mobile-tabs-contactUs { 
+        width: calc(100%);
         text-align: center;
         padding:  2.4vh;
-        margin-left: 5vw;
         border-radius: 10vh;
         border: 0.3rem solid rgba(40, 39, 56, 0.95);
         background-color: white;
@@ -430,17 +441,13 @@ footbar>img:hover {
     }
 
     .mobile-tabs-home { 
-        margin-top: 20%;
-    }
-
-    .mobile-tabs-members {
-        margin-bottom: 20%;
+        margin-top: 10%;
     }
 
     .mobile-contact-us {
         margin-bottom: 20%;
         display: none;
-        width: calc(100% - 15vw); 
+        width: calc(100% ); 
         text-align: center;
         padding: min(2rem, 3vh);
         margin-left: 5vw;
@@ -458,11 +465,12 @@ footbar>img:hover {
 
     .mobile-nav-cancel {
         display: none;
-        width: 50%;
-        margin-inline: 25%;
+        width: 35%;
+        margin-inline: 23%;
+        margin-left: 19%;
         justify-content: center;
         align-items: center;
-        margin-top: 20%;
+        margin-top: 15%;
     }
 
     .mobile-nav-cancel>img {
